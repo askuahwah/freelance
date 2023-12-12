@@ -151,7 +151,7 @@ const Navbar = () => {
       <div
         ref={ref}
         className="sidebar fixed top-0 left-0 p-10 bg-black text-white transform transition-transform translate-x-0 "
-        style={{ width: "280px", height: "100vh" }}
+        style={{ width: "20%", height: "100%" }}
       >
         <div className="flex" style={{alignItems: "center"}}>
         <svg
@@ -479,7 +479,7 @@ const Navbar = () => {
           <button
             className="flex justify-center bg-white text-black "
             style={{
-              width: "6.875em",
+              width: "40%",
               height: "2.5em",
               borderRadius: "0.875em",
             }}
@@ -554,7 +554,7 @@ const Navbar = () => {
           <button
             className="flex justify-center"
             style={{
-              width: "6.875em",
+              width: "36%",
               height: "2.5em",
               borderRadius: "0.875em",
             }}

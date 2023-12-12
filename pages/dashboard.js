@@ -104,13 +104,13 @@ const Dashboard = () => {
     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
   }} >
             <div  className="flex justify-between">
-                <h1>Highest volume influencers</h1>
+                <h1 style={{ fontWeight: "600", fontSize: "1.3em"}} className="family-instrument-sans">Highest volume influencers</h1>
                 <button>View All</button>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>1.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -122,12 +122,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Google</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$6,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$6,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -139,12 +139,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$4,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -156,12 +156,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$4,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -173,12 +173,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$4,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -190,12 +190,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$4,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -207,7 +207,7 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$4,564</span>
             </div>
         </div>
         <div className="secondbar-container"  style={{
@@ -221,13 +221,13 @@ const Dashboard = () => {
     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
   }}>
             <div  className="flex justify-between">
-                <h1>Most used Apps</h1>
+            <h1 style={{ fontWeight: "600", fontSize: "1.3em"}} className="family-instrument-sans">Most used Apps</h1>
                 <button>View All</button>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>1.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -239,12 +239,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Google</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$6,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$6,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -256,12 +256,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$6,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -273,12 +273,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$6,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -290,12 +290,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$6,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -307,12 +307,12 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$6,564</span>
             </div>
             <div className="listitem pt-2 flex justify-between" >
-                <div className="flex">
+                <div className="flex items-center">
                     <span>2.</span>
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
+                    <svg width="44" height="44" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style={{paddingLeft: "10px"}}>
 <path d="M0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18Z" fill="white"/>
 <path d="M18.0002 13.216C19.4649 13.216 20.4529 13.8487 21.0162 14.3773L23.2176 12.228C21.8656 10.9713 20.1062 10.2 18.0002 10.2C14.9496 10.2 12.3149 11.9507 11.0322 14.4987L13.5542 16.4573C14.1869 14.5767 15.9376 13.216 18.0002 13.216Z" fill="#EA4335"/>
 <path d="M25.488 18.1733C25.488 17.532 25.436 17.064 25.3233 16.5787H18V19.4733H22.2987C22.212 20.1927 21.744 21.276 20.704 22.004L23.1653 23.9107C24.6387 22.55 25.488 20.548 25.488 18.1733Z" fill="#4285F4"/>
@@ -324,7 +324,7 @@ const Dashboard = () => {
                         <p className="text-xl font-semibold">Foursquare</p>
                     </div>
                 </div>
-                <span className="text-xl font-semibold">$4,564</span>
+                <span className="text-xl font-semibold text-f4dbba">$6,564</span>
             </div>
         </div>
         

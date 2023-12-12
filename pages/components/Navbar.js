@@ -56,7 +56,7 @@ const Navbar = () => {
         style={{
           backgroundColor: "rgba(99, 99, 99, 1)",
           width: "150em",
-          height: "6em"
+          height: "8em"
         }}
       >
         <div className="flex nav-content text-white" style={{
@@ -153,14 +153,14 @@ const Navbar = () => {
         className="sidebar fixed top-0 left-0 p-10 bg-black text-white transform transition-transform translate-x-0 "
         style={{ width: "280px", height: "100vh" }}
       >
-        <div className="flex ">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 400 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+        <div className="flex" style={{alignItems: "center"}}>
+        <svg
+    width="48"
+    height="48"
+    viewBox="0 0 400 400"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
             <rect width="400" height="400" fill="#1E1E1E" />
             <path
               d="M167.293 239.826C164.264 251.131 144.614 255.689 123.404 250.005C102.194 244.322 87.4556 230.55 90.4848 219.245C93.514 207.94 113.164 203.383 134.374 209.066C155.584 214.749 170.322 228.521 167.293 239.826Z"
@@ -264,13 +264,13 @@ const Navbar = () => {
               </linearGradient>
             </defs>
           </svg>
-          <div className="text-2xl font-bold">Origin</div>
+          <div className="text-4xl font-bold">Origin</div>
         </div>
         <div
           className="side-navigation font-instrument-sans top-10  relative items-center justify-center"
           style={{ width: "292px" }}
         >
-        <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>
+        <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em",   boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", }}>
             <svg
               width="24"
               height="24"
@@ -297,9 +297,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/"} className="px-2">Dashboard</Link>
+            <Link href={"/"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Dashboard</Link>
           </div>
-          <div  className={`flex ${isActive ? 'bg-pink-500' : 'bg-slate-300'}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : 'bg-slate-300'}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em",     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", }}>
             <svg
               width="24"
               height="24"
@@ -334,9 +334,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/favorites"} className="px-2">Favorites</Link>
+            <Link href={"/favorites"}className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Favorites</Link>
           </div>
-          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px', paddingLeft: "0.5em"}}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px', paddingLeft: "0.5em",     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",}}>
             <svg
               width="24"
               height="24"
@@ -371,9 +371,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/posts"} className="px-2">Posts</Link>
+            <Link href={"/posts"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Posts</Link>
           </div>
-          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em",     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", }}>
             <svg
               width="24"
               height="24"
@@ -394,9 +394,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/analytics"} className="px-2">Analytics</Link>
+            <Link href={"/analytics"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Analytics</Link>
           </div>
-          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" , }}>
             <svg
               width="24"
               height="24"
@@ -467,7 +467,7 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/lineup"} className="px-2 ${isActive ? 'active' : ''}" >Line-up Maker</Link>
+            <Link href={"/lineup"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }} >Line-up Maker</Link>
           </div>
         </div>
         <div
@@ -585,3 +585,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

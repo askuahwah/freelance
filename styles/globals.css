@@ -14,3 +14,6 @@ body {
     box-sizing: border-box;
 } 
 
+.firstcontainerfirstbar {
+    background-image: url('/images/bgimg1.png');
+}

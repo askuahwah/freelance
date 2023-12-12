@@ -55,31 +55,17 @@ const Navbar = () => {
   };
   const ref = useRef();
   return (
-    <div className="flex shadow-md">
-      <div
-        className="nav top-0 flex"
-        style={{
-          backgroundColor: "rgba(99, 99, 99, 1)",
-          width: "1400px",
-          height: "126px",
-          marginLeft: "340px",
-        }}
-      >
+    <div className={style.navbar_main}>
+      <div className={style.navbar_a}>
         <div className="flex nav-content text-white">
           <input
-            className="bg-black rounded-full text-white px-4 my-auto "
+            className={style.navbar_search}
             type="text"
             placeholder="Search an influencer or project"
             style={{ width: "500px", height: "52px", marginLeft: "40px" }}
           />
-          <svg
-            className="my-auto"
-            width="20"
-            height="18"
-            viewBox="0 0 20 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ marginLeft: "20px" }}
+          <div
+            className={style.navbar_advance}
           >
           <Faders/>
           <p>Advance filter</p> 

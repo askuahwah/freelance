@@ -1,7 +1,21 @@
 import React, { useRef, useState } from "react";
+import { useRouter } from 'next/router';
 import Link from "next/link";
 
 const Navbar = () => {
+  const router = useRouter();
+  const pagePaths = {
+    dashboard: '/',
+    favorites: '/favorites',
+    posts: '/posts',
+    analytics: '/analytics',
+    lineup: '/lineup'
+  };
+
+  // Determine the active state for each page
+  //const isActive = Object.values(pagePaths).some((path) => router.pathname === path);
+  const isActive = Object.values(pagePaths).includes(router.pathname);
+
   const toggleCart = () => {
     if (ref.current.classList.contains("translate-x-full")) {
       ref.current.classList.remove("translate-x-full");
@@ -41,18 +55,20 @@ const Navbar = () => {
         className="nav top-0 flex"
         style={{
           backgroundColor: "rgba(99, 99, 99, 1)",
-          width: "1400px",
-          height: "126px",
-          marginLeft: "340px",
+          width: "150em",
+          height: "6em"
         }}
       >
-        <div className="flex nav-content text-white">
-          <input
-            className="bg-black rounded-full text-white px-4 my-auto "
-            type="text"
-            placeholder="Search an influencer or project"
-            style={{ width: "500px", height: "52px", marginLeft: "40px" }}
-          />
+        <div className="flex nav-content text-white" style={{
+         
+          marginLeft: "17em",
+        }}>
+        <input
+  className="bg-black rounded-full text-white px-1.33 my-auto"
+  type="text"
+  placeholder="Search an influencer or project"
+  style={{ width: "31.25em", height: "3.25em", marginLeft: "2.67em", paddingLeft: "0.5em" }}
+/>
           <svg
             className="my-auto"
             width="20"
@@ -251,10 +267,10 @@ const Navbar = () => {
           <div className="text-2xl font-bold">Origin</div>
         </div>
         <div
-          className="side-navigation top-10  relative items-center justify-center"
+          className="side-navigation font-instrument-sans top-10  relative items-center justify-center"
           style={{ width: "292px" }}
         >
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+        <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>
             <svg
               width="24"
               height="24"
@@ -281,9 +297,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/"}>Dashboard</Link>
+            <Link href={"/"} className="px-2">Dashboard</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : 'bg-slate-300'}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em" }}>
             <svg
               width="24"
               height="24"
@@ -318,9 +334,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/favorites"}>Favorites</Link>
+            <Link href={"/favorites"} className="px-2">Favorites</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px', paddingLeft: "0.5em"}}>
             <svg
               width="24"
               height="24"
@@ -355,9 +371,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/posts"}>Posts</Link>
+            <Link href={"/posts"} className="px-2">Posts</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em" }}>
             <svg
               width="24"
               height="24"
@@ -378,9 +394,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/analytics"}>Analytics</Link>
+            <Link href={"/analytics"} className="px-2">Analytics</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>
             <svg
               width="24"
               height="24"
@@ -451,21 +467,21 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/lineup"}>Line-up Maker</Link>
+            <Link href={"/lineup"} className="px-2 ${isActive ? 'active' : ''}" >Line-up Maker</Link>
           </div>
         </div>
         <div
           className="bottom-content flex absolute bottom-5"
           style={{
-            width: "292px",
+            width: "18.25em",
           }}
         >
           <button
             className="flex justify-center bg-white text-black "
             style={{
-              width: "142px",
-              height: "40px",
-              borderRadius: "14px",
+              width: "6.875em",
+              height: "2.5em",
+              borderRadius: "0.875em",
             }}
           >
             <svg
@@ -538,8 +554,9 @@ const Navbar = () => {
           <button
             className="flex justify-center"
             style={{
-              width: "142px",
-              height: "40px",
+              width: "6.875em",
+              height: "2.5em",
+              borderRadius: "0.875em",
             }}
           >
             <svg

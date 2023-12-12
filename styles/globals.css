@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
- body {
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap');
+
+/* Apply the font family to a CSS variable for easier reference */
+:root {
+  --font-family-instrument-sans: 'Instrument Sans', sans-serif;
+}
+
+body {
     overflow-x: hidden;
     box-sizing: border-box;
 } 

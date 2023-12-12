@@ -1,5 +1,10 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
+import  style from "../../styles/navbar.module.css";
+import Faders from "./svg/Faders.svg"
+import Light from "./svg/light.svg"
+import Dark from "./svg/dark.svg"
+
 
 const Navbar = () => {
   const toggleCart = () => {
@@ -48,16 +53,8 @@ const Navbar = () => {
           <div
             className={style.navbar_advance}
           >
-            <path
-              d="M10.75 8.25V17.25C10.75 17.4489 10.671 17.6397 10.5303 17.7803C10.3897 17.921 10.1989 18 10 18C9.80109 18 9.61032 17.921 9.46967 17.7803C9.32902 17.6397 9.25 17.4489 9.25 17.25V8.25C9.25 8.05109 9.32902 7.86032 9.46967 7.71967C9.61032 7.57902 9.80109 7.5 10 7.5C10.1989 7.5 10.3897 7.57902 10.5303 7.71967C10.671 7.86032 10.75 8.05109 10.75 8.25ZM16.75 15C16.5511 15 16.3603 15.079 16.2197 15.2197C16.079 15.3603 16 15.5511 16 15.75V17.25C16 17.4489 16.079 17.6397 16.2197 17.7803C16.3603 17.921 16.5511 18 16.75 18C16.9489 18 17.1397 17.921 17.2803 17.7803C17.421 17.6397 17.5 17.4489 17.5 17.25V15.75C17.5 15.5511 17.421 15.3603 17.2803 15.2197C17.1397 15.079 16.9489 15 16.75 15ZM19 12H17.5V0.75C17.5 0.551088 17.421 0.360322 17.2803 0.21967C17.1397 0.0790178 16.9489 0 16.75 0C16.5511 0 16.3603 0.0790178 16.2197 0.21967C16.079 0.360322 16 0.551088 16 0.75V12H14.5C14.3011 12 14.1103 12.079 13.9697 12.2197C13.829 12.3603 13.75 12.5511 13.75 12.75C13.75 12.9489 13.829 13.1397 13.9697 13.2803C14.1103 13.421 14.3011 13.5 14.5 13.5H19C19.1989 13.5 19.3897 13.421 19.5303 13.2803C19.671 13.1397 19.75 12.9489 19.75 12.75C19.75 12.5511 19.671 12.3603 19.5303 12.2197C19.3897 12.079 19.1989 12 19 12ZM3.25 12C3.05109 12 2.86032 12.079 2.71967 12.2197C2.57902 12.3603 2.5 12.5511 2.5 12.75V17.25C2.5 17.4489 2.57902 17.6397 2.71967 17.7803C2.86032 17.921 3.05109 18 3.25 18C3.44891 18 3.63968 17.921 3.78033 17.7803C3.92098 17.6397 4 17.4489 4 17.25V12.75C4 12.5511 3.92098 12.3603 3.78033 12.2197C3.63968 12.079 3.44891 12 3.25 12ZM5.5 9H4V0.75C4 0.551088 3.92098 0.360322 3.78033 0.21967C3.63968 0.0790178 3.44891 0 3.25 0C3.05109 0 2.86032 0.0790178 2.71967 0.21967C2.57902 0.360322 2.5 0.551088 2.5 0.75V9H1C0.801088 9 0.610322 9.07902 0.46967 9.21967C0.329018 9.36032 0.25 9.55109 0.25 9.75C0.25 9.94891 0.329018 10.1397 0.46967 10.2803C0.610322 10.421 0.801088 10.5 1 10.5H5.5C5.69891 10.5 5.88968 10.421 6.03033 10.2803C6.17098 10.1397 6.25 9.94891 6.25 9.75C6.25 9.55109 6.17098 9.36032 6.03033 9.21967C5.88968 9.07902 5.69891 9 5.5 9ZM12.25 4.5H10.75V0.75C10.75 0.551088 10.671 0.360322 10.5303 0.21967C10.3897 0.0790178 10.1989 0 10 0C9.80109 0 9.61032 0.0790178 9.46967 0.21967C9.32902 0.360322 9.25 0.551088 9.25 0.75V4.5H7.75C7.55109 4.5 7.36032 4.57902 7.21967 4.71967C7.07902 4.86032 7 5.05109 7 5.25C7 5.44891 7.07902 5.63968 7.21967 5.78033C7.36032 5.92098 7.55109 6 7.75 6H12.25C12.4489 6 12.6397 5.92098 12.7803 5.78033C12.921 5.63968 13 5.44891 13 5.25C13 5.05109 12.921 4.86032 12.7803 4.71967C12.6397 4.57902 12.4489 4.5 12.25 4.5Z"
-              fill="#FFE6C6"
-            />
-          </svg>
-          <div
-            className="my-auto"
-            style={{ marginLeft: "10px", fontSize: "16px" }}
-          >
-            Advance filter
+          <Faders/>
+          <p>Advance filter</p> 
           </div>
 
           <div className="nav-side-buttons  absolute right-10 top-10 flex w-64 justify-end" style={{borderRadius: '8px'}}>
@@ -120,8 +117,7 @@ const Navbar = () => {
 
       <div
         ref={ref}
-        className="sidebar fixed top-0 left-0 p-10 bg-black text-white transform transition-transform translate-x-0 "
-        style={{ width: "280px", height: "100vh" }}
+        className={style.sidebar}
       >
         <div className="flex ">
           <svg
@@ -440,114 +436,10 @@ const Navbar = () => {
             <Link href={"/lineup"}>Line-up Maker</Link>
           </div>
         </div>
-        <div
-          className="bottom-content flex absolute bottom-5"
-          style={{
-            width: "292px",
-          }}
-        >
-          <button
-            className="flex justify-center bg-white text-black "
-            style={{
-              width: "142px",
-              height: "40px",
-              borderRadius: "14px",
-            }}
-          >
-            <svg
-              className="my-auto"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 1L12 3"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M23 12L21 12"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M19.7778 19.7781L18.4815 18.4818"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M4.22168 19.7782L5.51804 18.4819"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M12 21L12 23"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M3 12L1 12"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M5.51807 5.51821L4.2217 4.22185"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M18.4814 5.51821L19.7778 4.22185"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="6"
-                stroke="black"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-            </svg>
-            <div className="my-auto">Light</div>
-          </button>
-          <button
-            className="flex justify-center"
-            style={{
-              width: "142px",
-              height: "40px",
-            }}
-          >
-            <svg
-              className="my-auto"
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3.5 12.2941C3.5 17.2647 7.52944 21.2941 12.5 21.2941C16.3527 21.2941 19.6399 18.8733 20.9237 15.4698C20.9237 15.4698 14.5 15 12 12.5C9.51408 10.0141 9 4 9 4C5.76806 5.36551 3.5 8.56494 3.5 12.2941Z"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-            </svg>
-            <div className="my-auto" style={{ fontSize: "16px" }}>
-              Dark
-            </div>
-          </button>
-        </div>
+        <div className={style.button_main}>
+        <div><button className="flex"><Light/>Light</button></div>
+        <div style={{background: "black", marginLeft: "4px"}}><button className={style.dark_button}><Dark/>Dark</button></div>
+      </div>
       </div>
     </div>
   );

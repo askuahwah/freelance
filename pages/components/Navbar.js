@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { useRouter } from 'next/router';
 import Link from "next/link";
 import  style from "../../styles/navbar.module.css";
 import Faders from "./svg/Faders.svg"
@@ -7,6 +8,19 @@ import Dark from "./svg/dark.svg"
 
 
 const Navbar = () => {
+  const router = useRouter();
+  const pagePaths = {
+    dashboard: '/',
+    favorites: '/favorites',
+    posts: '/posts',
+    analytics: '/analytics',
+    lineup: '/lineup'
+  };
+
+  // Determine the active state for each page
+  //const isActive = Object.values(pagePaths).some((path) => router.pathname === path);
+  const isActive = Object.values(pagePaths).includes(router.pathname);
+
   const toggleCart = () => {
     if (ref.current.classList.contains("translate-x-full")) {
       ref.current.classList.remove("translate-x-full");
@@ -41,17 +55,31 @@ const Navbar = () => {
   };
   const ref = useRef();
   return (
-    <div className={style.navbar_main}>
-      <div className={style.navbar_a}>
+    <div className="flex shadow-md">
+      <div
+        className="nav top-0 flex"
+        style={{
+          backgroundColor: "rgba(99, 99, 99, 1)",
+          width: "1400px",
+          height: "126px",
+          marginLeft: "340px",
+        }}
+      >
         <div className="flex nav-content text-white">
           <input
-            className={style.navbar_search}
+            className="bg-black rounded-full text-white px-4 my-auto "
             type="text"
             placeholder="Search an influencer or project"
             style={{ width: "500px", height: "52px", marginLeft: "40px" }}
           />
-          <div
-            className={style.navbar_advance}
+          <svg
+            className="my-auto"
+            width="20"
+            height="18"
+            viewBox="0 0 20 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ marginLeft: "20px" }}
           >
           <Faders/>
           <p>Advance filter</p> 
@@ -119,14 +147,14 @@ const Navbar = () => {
         ref={ref}
         className={style.sidebar}
       >
-        <div className="flex ">
-          <svg
-            width="48"
-            height="48"
-            viewBox="0 0 400 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+        <div className="flex" style={{alignItems: "center"}}>
+        <svg
+    width="48"
+    height="48"
+    viewBox="0 0 400 400"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
             <rect width="400" height="400" fill="#1E1E1E" />
             <path
               d="M167.293 239.826C164.264 251.131 144.614 255.689 123.404 250.005C102.194 244.322 87.4556 230.55 90.4848 219.245C93.514 207.94 113.164 203.383 134.374 209.066C155.584 214.749 170.322 228.521 167.293 239.826Z"
@@ -230,13 +258,13 @@ const Navbar = () => {
               </linearGradient>
             </defs>
           </svg>
-          <div className="text-2xl font-bold">Origin</div>
+          <div className="text-4xl font-bold">Origin</div>
         </div>
         <div
-          className="side-navigation top-10  relative items-center justify-center"
+          className="side-navigation font-instrument-sans top-10  relative items-center justify-center"
           style={{ width: "292px" }}
         >
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+        <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em",   boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", }}>
             <svg
               width="24"
               height="24"
@@ -263,9 +291,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/"}>Dashboard</Link>
+            <Link href={"/"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Dashboard</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : 'bg-slate-300'}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em",     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", }}>
             <svg
               width="24"
               height="24"
@@ -300,9 +328,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/favorites"}>Favorites</Link>
+            <Link href={"/favorites"}className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Favorites</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px', paddingLeft: "0.5em",     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",}}>
             <svg
               width="24"
               height="24"
@@ -337,9 +365,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/posts"}>Posts</Link>
+            <Link href={"/posts"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Posts</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0' , borderRadius: '8px',paddingLeft: "0.5em",     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", }}>
             <svg
               width="24"
               height="24"
@@ -360,9 +388,9 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/analytics"}>Analytics</Link>
+            <Link href={"/analytics"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }}>Analytics</Link>
           </div>
-          <div className="flex " style={{ width: "298px", height: "48px" }}>
+          <div  className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" , }}>
             <svg
               width="24"
               height="24"
@@ -433,16 +461,121 @@ const Navbar = () => {
                 strokeLinecap="square"
               />
             </svg>
-            <Link href={"/lineup"}>Line-up Maker</Link>
+            <Link href={"/lineup"} className={`flex ${isActive ? 'bg-pink-500' : ''}`} style={{ width: "12.625em", height: "3em", alignItems: 'center', margin: '0.8em 0', borderRadius: '8px', paddingLeft: "0.5em" }} >Line-up Maker</Link>
           </div>
         </div>
-        <div className={style.button_main}>
-        <div><button className="flex"><Light/>Light</button></div>
-        <div style={{background: "black", marginLeft: "4px"}}><button className={style.dark_button}><Dark/>Dark</button></div>
-      </div>
+        <div
+          className="bottom-content flex absolute bottom-5"
+          style={{
+            width: "292px",
+          }}
+        >
+          <button
+            className="flex justify-center bg-white text-black "
+            style={{
+              width: "142px",
+              height: "40px",
+              borderRadius: "14px",
+            }}
+          >
+            <svg
+              className="my-auto"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 1L12 3"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <path
+                d="M23 12L21 12"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <path
+                d="M19.7778 19.7781L18.4815 18.4818"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <path
+                d="M4.22168 19.7782L5.51804 18.4819"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <path
+                d="M12 21L12 23"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <path
+                d="M3 12L1 12"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <path
+                d="M5.51807 5.51821L4.2217 4.22185"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <path
+                d="M18.4814 5.51821L19.7778 4.22185"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="6"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+            </svg>
+            <div className="my-auto">Light</div>
+          </button>
+          <button
+            className="flex justify-center"
+            style={{
+              width: "142px",
+              height: "40px",
+            }}
+          >
+            <svg
+              className="my-auto"
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.5 12.2941C3.5 17.2647 7.52944 21.2941 12.5 21.2941C16.3527 21.2941 19.6399 18.8733 20.9237 15.4698C20.9237 15.4698 14.5 15 12 12.5C9.51408 10.0141 9 4 9 4C5.76806 5.36551 3.5 8.56494 3.5 12.2941Z"
+                stroke="white"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+            </svg>
+            <div className="my-auto" style={{ fontSize: "16px" }}>
+              Dark
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Navbar;
+
